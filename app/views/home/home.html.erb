@@ -12,9 +12,13 @@
 
        <small align = "center">Let's get you started: </small>
        <br>
-
+<% if user_signed_in? %>
+<a href="/shop" class="btn btn-lg btn-primary pull-left btn-custom" >Shop </a>
+<a a href="/products/user/index" class="btn btn-lg btn-info pull-right btn-custom"> My List </a>
+<% else %>
 <a href="/users/sign_up" class="btn btn-lg btn-primary pull-left btn-custom" >Sign up </a>
-        <a href="/users/sign_in" class="btn btn-lg btn-info pull-right btn-custom"> Sign in </a>
+<a href="/users/sign_in" class="btn btn-lg btn-info pull-right btn-custom"> Sign in </a>
+<% end %>
       </div>
     </div>
   </div>
