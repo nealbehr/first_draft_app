@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # Routes for the Interaction resource:
   get "/interactions/autonew/:user_id/:product_id/:like", :controller => "interactions", :action => "autonew"
 
+  get "/interactions/reset", :controller => "interactions", :action => "reset"
   get "/interactions/autoedit/:id", :controller => "interactions", :action => "autoedit"
   # CREATE
   get "/interactions/new", :controller => "interactions", :action => "new"
@@ -24,6 +25,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get "/delete_interaction/:id", :controller => "interactions", :action => "destroy"
+
+
   #------------------------------
 
   # Routes for the Product resource:

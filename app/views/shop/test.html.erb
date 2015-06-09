@@ -16,6 +16,9 @@
         <a href="/interactions/autonew/<%= @cur_prod.id %>/1" class="btn btn-lg btn-success pull-right btn-custom"> like </a>
 <% end %>
 
+<% if @cur_prod.id == 5 %>
+       <a href="/interactions/reset/" class="btn btn-lg btn-danger pull-left btn-custom" >RESET ALL </a>
+<% end %>
       </div>
     </div>
   </div>

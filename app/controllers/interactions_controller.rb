@@ -13,6 +13,15 @@ class InteractionsController < ApplicationController
     @interaction = Interaction.new
   end
 
+  def reset
+    Interaction.all.each do |testinteraction|
+      if testinteraction.user_id == current_user.id
+        testinteraction.destroy
+      end
+    end
+    redirect_to "/shop"
+  end
+
   def create
     @interaction = Interaction.new
     @interaction.like = params[:like]
