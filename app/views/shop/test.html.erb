@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class = "col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+       <h3 class="panel-title"><%= @cur_prod.title %> <span class="pull-right"> $<%= @cur_prod.price %></span></h3>
+     </div>
+     <div class="panel-body">
+       <a href = "/products/user/<%= @cur_prod.id %>">
+       <img src = "<%= @cur_prod.picture %>" class="img-responsive img-custom center-block">
+       </a>
+       <br>
+       <div class="btn-toolbar">
+<% if @cur_prod.id < 5 %>
+       <a href="/interactions/autonew/<%= @cur_prod.id %>/0" class="btn btn-lg btn-danger pull-left btn-custom" >hate </a>
+        <a href="/interactions/autonew/<%= @cur_prod.id %>/1" class="btn btn-lg btn-success pull-right btn-custom"> like </a>
+<% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+

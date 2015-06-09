@@ -1,0 +1,29 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= @product.title %> <span class="pull-right"> $<%= @product.price %></span></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <img src = "<%= @product.picture %>" class="img-responsive img-custom center-block">
+
+              <%= @product.description %>
+            </dl>
+            <div class="btn-group btn-group-justified">
+<% if @product.id < 5 %>         <a href="/interactions/autoedit/<%= @product.id %>" class="btn btn-danger" >remove </a> <% end %>
+          <a href="/products/user/index" class="btn btn-warning"> back </a>
+          <a href = <%= @product.url %> class = "btn btn-info"> buy </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
